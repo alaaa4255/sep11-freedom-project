@@ -169,7 +169,7 @@ I wanted to learn how I could use my code and what I could make out if it. So I 
   }
 }
 ```
-     For this, the primary color is green and the secondary color is blue. The green plays the more important roles to the more important designs to your creation that you want to highlight and the blue shows up in the more less observent and focused on parts to not take attention away from the main thing while supporting.
+
 So, after going over some of the commonly used codes in less;css I tinkered with it by picking out potential headings and background colors for the project I am trying to create.
 
 ``` css
@@ -220,7 +220,7 @@ body {
   background-color: @secondary-color;
   &:hover { background-color: lighten(@secondary-color, 10%); }
 }
-``` 
+```
 This shows the potential starting for my project. I wanted the background to be pink and for the primary and secondary colors to lighly blend with the pink so I chose to make the primary colors a coral and the secondary color purple. Then I chose to make the text colors white. I made the font a bold Arial so that the heading would be written like that. This code just shows the beginning of the designs and illustrations.
 Class comments
 ### X/X/XX:
