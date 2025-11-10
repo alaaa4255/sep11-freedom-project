@@ -223,7 +223,13 @@ body {
 ```
 This shows the potential starting for my project. I wanted the background to be pink and for the primary and secondary colors to lighly blend with the pink so I chose to make the primary colors a coral and the secondary color purple. Then I chose to make the text colors white. I made the font a bold Arial so that the heading would be written like that. This code just shows the beginning of the designs and illustrations.
 Class comments
-### X/X/XX:
+
+
+
+### 11/9/2025:
+* I watched youtube videos that explain less;css better. For example in this youtube video it explains how to first set up less;css while you are coding it. <a href = "https://www.youtube.com/watch?v=YD91G8DdUsw"> youtube viedeo </a>
+
+* This youtube video taught me how I could use functions in less <a href = "https://www.youtube.com/watch?v=U9mJmy0YhmQ> youtube 
 * Text
 
 
