@@ -80,6 +80,7 @@
 </body>
 </html>
 
+```css
 @primary-color: #3498db;
 @secondary-color: #2ecc71;
 @task-bg-color: #ecf0f1;
@@ -149,7 +150,7 @@
     }
 }
 
-
+```
 
 
 
@@ -229,11 +230,159 @@ Class comments
 ### 11/9/2025:
 * I watched youtube videos that explain less;css better. For example in this youtube video it explains how to first set up less;css while you are coding it. <a href = "https://www.youtube.com/watch?v=YD91G8DdUsw"> youtube viedeo </a>
 
-* This youtube video taught me how I could use functions in less <a href = "https://www.youtube.com/watch?v=U9mJmy0YhmQ> youtube 
+* This youtube video taught me how I could use functions in less <a href = "https://www.youtube.com/watch?v=U9mJmy0YhmQ> youtube
 * Text
 
 
+### 11/16/2025
+* To tinker with my tool, I decided to use my old sep10 freedome project code to add the less;css code to. To help me out I used google, and the offical website of less;css
+* Using less;css on my old code porject made the code be more readable and easier to understand.
+* what I changed and what I did was; create a variable for each of things I used. I made blue the primaery color since that was the most noticable on my project for the links. I have grey the secondary color since it was noticable but less than blue for the borders. I also leanred that while coding (!important) could be used when there is certain things that needs to be used smoothly. Some fo the biggest changes I made was that beofre my navbar did not change colors when it was hovered on since i did not code it that way when i first started making myy project but now with the new chnages using less the navbar changes color when it is hovered 0n. less did not only make this more creative but it also ensured that the chnages are strict and stay the same no matter what. 
+
+``` css
+// Step 1: Global Variables
+@primary-color: #0d6efd;       // Primary color (Blue) for accents like links and buttons
+@secondary-color: #6c757d;     // Secondary color (Gray) for borders, etc.
+@bg-dark: #2c2c2c;             // Dark background color for the body and navbar
+@bg-light: #ffffff;            // Light background color for content boxes
+@text-color: #ffffff;          // Default text color (white for readability on dark background)
+@text-link-color: #0d6efd;     // Link color (matching primary color)
+@border-color: #6c757d;        // Border color (grayish) for containers
+@padding: 15px;                // Standard padding to maintain consistent spacing
+@font-family: 'Arial', sans-serif;  // Set the font for the page
+
+// Step 2: Mixins for Reusable Styles
+// Mixin to apply border-radius to any element
+.border-radius(@radius: 5px) {
+  border-radius: @radius;
+}
+
+// Mixin to center content using Flexbox
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin for smooth transitions (e.g., for background-color changes on hover)
+.smooth-transition(@property: background-color, @duration: 0.3s) {
+  transition: @property @duration ease;
+}
+
+// Step 3: Global Styles
+// Body styles including background and text color
+body {
+  background-color: @bg-dark;
+  color: @text-color;
+  font-family: @font-family;
+  scroll-behavior: smooth;
+}
+
+// Navbar customization with link hover effects
+.navbar {
+  background-color: @bg-dark;  // Set background color of navbar
+  .navbar-nav {
+    margin-left: auto;         // Align navbar items to the right
+  }
+}
+
+.navbar a {
+  color: @text-color !important;  // Ensure navbar links are white
+  margin-right: 20px;
+  .smooth-transition(background-color);  // Smooth transition for background color
+  &:hover {
+    background-color: darken(@primary-color, 10%);  // Darken the background when hovering over links
+  }
+}
+
+// Hero Section with background image and centered text
+.hero-section {
+  background: url('https://img.freepik.com/free-photo/gradient-navy-blue-digital-grid-wallpaper_53876-104785.jpg?semt=ais_hybrid&w=740') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px black;  // Add a shadow effect to make the text pop
+  }
+}
+
+// Main content section style
+.main-content {
+  background-color: @bg-dark;
+  padding-top: 60px;  // Add padding to top for spacing
+}
+
+// Heading styles
+h2 {
+  color: @primary-color;  // Set heading color to blue
+  text-align: center;
+  margin-top: 60px;  // Margin for spacing
+}
+
+// Container Border Style (used in intro, hardware, and software sections)
+.container-bordered {
+  border: 2px solid @border-color;  // Use gray border color
+  padding: @padding;  // Apply standard padding
+  margin: 10px;
+  background-color: @bg-light;  // Light background for content
+  color: black;
+  .border-radius(5px);  // Apply border radius (rounded corners)
+}
+
+// Hardware & Software Section - Flexbox to wrap items responsively
+.hardware-section, .software-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  // Center items within the flex container
+}
+
+// Carousel adjustments to ensure consistent sizing
+.carousel {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.carousel-item img {
+  max-height: 400px;  // Ensure images don't get too large everytime the website is visted
+  object-fit: contain;  // Mkes sure there is a good fitting ratio of whatevrr contenet is inside the conatainer.
+}
+
+// Link hover effects and color transitions
+.container-link a {
+  font-weight: bold;
+  text-decoration: none;
+  color: @text-link-color;  // Use primary color for links
+  .smooth-transition(color);  // Smooth transition for color changes
+  &:hover {
+    color: darken(@text-link-color, 15%);  // Darken the link color on hover
+  }
+}
+
+.link-title {
+  margin-bottom: 10px;
+  font-size: 1.2rem;  // Slightly larger font for better readability
+}
+
+// Responsive Styling (for smaller screens)
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 3rem;  // makes the font on smaller screens automically smaller
+  }
+  .container-bordered {
+    max-width: 90%;  // Adjust width of content containers on mobile
+  }
+  .carousel-item img {
+    max-height: 300px;  // sctricly makes sure that the size of the coursel will automatically switch to its needed size without issues
+  }
+}
+```
 <!--
+
+
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
 * Challenges, a-ha moments, etc
