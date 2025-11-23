@@ -237,7 +237,7 @@ Class comments
 ### 11/16/2025
 * To tinker with my tool, I decided to use my old sep10 freedome project code to add the less;css code to. To help me out I used google, and the offical website of less;css
 * Using less;css on my old code porject made the code be more readable and easier to understand.
-* what I changed and what I did was; create a variable for each of things I used. I made blue the primaery color since that was the most noticable on my project for the links. I have grey the secondary color since it was noticable but less than blue for the borders. I also leanred that while coding (!important) could be used when there is certain things that needs to be used smoothly. Some fo the biggest changes I made was that beofre my navbar did not change colors when it was hovered on since i did not code it that way when i first started making myy project but now with the new chnages using less the navbar changes color when it is hovered 0n. less did not only make this more creative but it also ensured that the chnages are strict and stay the same no matter what. 
+* what I changed and what I did was; create a variable for each of things I used. I made blue the primaery color since that was the most noticable on my project for the links. I have grey the secondary color since it was noticable but less than blue for the borders. I also leanred that while coding (!important) could be used when there is certain things that needs to be used smoothly. Some fo the biggest changes I made was that beofre my navbar did not change colors when it was hovered on since i did not code it that way when i first started making myy project but now with the new chnages using less the navbar changes color when it is hovered 0n. less did not only make this more creative but it also ensured that the chnages are strict and stay the same no matter what.
 
 ``` css
 // Step 1: Global Variables
@@ -380,7 +380,19 @@ h2 {
   }
 }
 ```
-<!--
+
+### 11/23/2025
+
+* Today i learned the donts while using less;css. I used google and youtube videos to learn about this.
+
+<a href = "https://www.youtube.com/watch?v=RctP49SwyT0&t=483s" >
+
+* Don't over nest
+* Don't forget variable usage since they are constants in less;css
+* Don't link files inncorrectly
+* Don't use @import without a plan
+* Don't neglect fendemntals of css
+
 
 
 * Links you used today (websites, videos, etc)
