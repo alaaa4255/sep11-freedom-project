@@ -401,3 +401,130 @@ h2 {
 * Questions you still have
 * What you're going to try next
 -->
+
+
+
+### 12/7/2025
+
+```css
+/* Variables for color */
+@primary-color: #4CAF50; /* Green */
+@secondary-color: #333;   /* Dark gray */
+@light-gray: #f4f4f4;     /* Light gray */
+@white: #fff;             /* White */
+
+/* General Page Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: @light-gray;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: @primary-color;
+    color: @white;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+}
+
+/* Navigation Bar */
+nav {
+    background-color: @secondary-color;
+    overflow: hidden;
+
+    a {
+        float: left;
+        display: block;
+        color: @white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: lighten(@secondary-color, 10%);
+            color: black;
+        }
+    }
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    background-color: @white;
+    max-width: 1100px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        color: @secondary-color;
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: darken(@secondary-color, 20%);
+    }
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 30px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: @secondary-color;
+    color: @white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    p {
+        margin: 0;
+        font-size: 16px;
+    }
+}
+
+/* Forms */
+form {
+    background-color: lighten(@light-gray, 10%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    button {
+        background-color: @primary-color;
+        color: @white;
+        border: none;
+        padding: 15px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: darken(@primary-color, 10%);
+        }
+    }
+}
+```
