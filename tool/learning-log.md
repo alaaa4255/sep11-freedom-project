@@ -528,3 +528,26 @@ form {
     }
 }
 ```
+### 12/8/2025
+I learned to use Arrays and loops ia a less;css code
+
+```css
+@colors: #3498db, #e74c3c, #2ecc71, #f39c12; // these are all the colors put in an array because they are all the ones that are going to be looped through and used
+
+// instead of writing out each of the color and its code, you could code a loop that involves all the colors that are going to be used.
+// .each is a loop that is used to pass through each of the colors in an array so that the program uses them accordingly
+// @value helps the code apply the styles without repitiion of code
+// code will go through every color and change the background when the next color is up
+.each(@colors, {
+  .color-@{value} {
+    background-color: @value;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+});
+
+
+
