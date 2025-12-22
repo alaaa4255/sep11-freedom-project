@@ -548,6 +548,57 @@ I learned to use Arrays and loops ia a less;css code
     border-radius: 5px;
   }
 });
+```
 
+### 12/21/25
+
+```css
+const less = require('less');
+const fs = require('fs');
+
+fs.readFile('styles.less', 'utf8', (err, lessCode) => {
+    if (err) throw err;
+
+    less.render(lessCode)
+        .then(output => {
+            console.log(output.css);  // Compiled CSS
+        })
+        .catch(err => {
+            console.error(err);
+        });
+});
+```
+
+```css
+// Define an array of colors
+@colors: #ff5733, #33ff57, #3357ff, #f5a623;
+
+// Loop through the array to create styles for each color
+.generate-buttons(@colors) {
+  .each(@index) when (@index <= length(@colors)) {
+    @color: extract(@colors, @index); // Get the color from the array
+
+    // Create a class for each button color
+    .button-@{index} {
+      background-color: @color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    // Recursive call to process the next item in the array
+    .each(@index + 1);
+  }
+}
+
+// Call the mixin to generate button styles
+.generate-buttons(@colors);
+```
 
 
