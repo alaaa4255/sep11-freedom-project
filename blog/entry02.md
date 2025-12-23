@@ -22,7 +22,7 @@
 
 
 
-<p>Through the <a href ="https://lesscss.org/#"> less.js </a>.website, I learned how to use loops while coding less;css. Specficically I used <a href =¨https://lesscss.org/functions/#logical-functions¨> this section (logical functions) </a> to learn how to involve and what I could use loops for in less. I also used google since I found it very helpful with providng me more information about loops and how I could use it in less. </p>
+<p>Through the <a href ="https://lesscss.org/#"> less.js </a>.website, I learned how to use loops while coding less;css. Specficically I used <a href = ¨https://lesscss.org/functions/#logical-functions"> this section (logical functions) </a> to learn how to involve and what I could use loops for in less. I also used google since I found it very helpful with providng me more information about loops and how I could use it in less. </p>
 
 <p> After asking google the same thing with Arrays instead this time replacing it with loops, I saw this code snippet</p>
 
