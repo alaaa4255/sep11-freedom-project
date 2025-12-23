@@ -2,7 +2,7 @@
 ##### 12/15/2025
 
 ### Context
-<p> We have spent the past couple of weeks learning and exploring our tool. As of right now, I learned how to use loops and Arrays in less;css. To learn this, I used the offical; webiste of <a href=¨https://lesscss.org/#¨> less.js </a> to continue to look through all the properties of less. I found how to call a function in less;css, variable, Mixkins. loops However, I did not see on the website how to use Arrays while coding less;css. So, to learn about it, I used google to get my information. In particular, I searched, ¨How could I use Arrays while coding less;css¨ and found a snippet of code of how I could involve Arrays in my less code.
+<p> We have spent the past couple of weeks learning and exploring our tool. As of right now, I learned how to use loops and Arrays in less;css. To learn this, I used the offical; webiste of <a href ="https://lesscss.org/#"> less;css </a>. to continue to look through all the properties of less. I found how to call a function in less;css, variable, Mixkins. loops However, I did not see on the website how to use Arrays while coding less;css. So, to learn about it, I used google to get my information. In particular, I searched, ¨How could I use Arrays while coding less;css¨ and found a snippet of code of how I could involve Arrays in my less code.
 
 <p>The code I found</p>
 
