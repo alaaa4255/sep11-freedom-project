@@ -601,4 +601,13 @@ fs.readFile('styles.less', 'utf8', (err, lessCode) => {
 .generate-buttons(@colors);
 ```
 
+### 1/13/2026
+
+<a href = "https://www.youtube.com/watch?v=RctP49SwyT0&t=483s" >
+
+* Don't over nest
+* Don't forget variable usage since they are constants in less;css
+* Don't link files inncorrectly
+* Don't use @import without a plan
+* Don't neglect fendemntals of css
 
