@@ -611,3 +611,6 @@ fs.readFile('styles.less', 'utf8', (err, lessCode) => {
 * Don't use @import without a plan
 * Don't neglect fendemntals of css
 
+<a href = "https://www.youtube.com/watch?v=YD91G8DdUsw"> youtube viedeo </a>
+
+* This youtube video taught me how I could use functions in less <a href = "https://www.youtube.com/watch?v=U9mJmy0YhmQ> youtube
