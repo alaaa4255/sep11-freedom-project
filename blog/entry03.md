@@ -2,14 +2,14 @@
 ##### 2/2/2026
 
 ### Progress:
-<p>While learning about my tool, I learend and dove deep into how I could use Logic statements and artimetic and color functions in css. I was able to learn about this through google and <a href ="https://lesscss.org/#"> the offical website: less;css </a>. Spefcially, I learned that I could use logic statements to apply certain styles on certain events like buttons. With functions, I learned how I could use math operataions to get certain events like buttons, boxes to be fixed to a certain size. I also learned about color functions which maniplualte a solid color such as blue to either lighten or darken depdedning on the situation.  </p>
+<p>While learning about my tool, I learned and dove deep into how I could use Logic statements and artimetic and color functions in css. I was able to learn about this through google and <a href ="https://lesscss.org/#"> the offical website: less;css </a>. Specfically, I learned that I could use logic statements to apply certain styles on certain events like buttons. With functions, I learned how I could use math operataions to get certain events like buttons, boxes to be fixed to a certain size. I also learned about color functions which maniplualte a solid color such as blue to either lighten or darken depdedning on the situation.  </p>
 
 
 ### FUNCTIONS
 
 <p> COLOR FUNCTIONS: </p>
 
-<p>In color functions there are many ways you could manipulate a color. The ways I learned where lighten and darken, and fadeIn and fadeOut functions. Each of these for functions chnage a color im  multiple ways depending on how you apply it in the code</p>
+<p>In color functions there are many ways you could manipulate a color. The ways I learned where lighten and darken, and fadeIn and fadeOut functions. Each of these for functions chnage a color in multiple ways depending on how you apply it in the code</p>
 
 <p>Lighten and Darken:</p>
 
@@ -26,9 +26,9 @@
 }
 ```
 
-<p> In these codes, the fucntions lighten and darken are being used to change the base color which is blue to either become lighter or become darker. In between the () you see values such as 20% and 10%. These values represnted what each of the fucntion will lighten or darken by. In the first code, the fucntion is making the color blue lighter by 20%. In the second code, the fucntion is amking the color pink darker by 10%. These properties could be used for any colors that are being used in the code so that the colors are able to change accordingly.</p>
+<p> In these codes, the fucntions lighten and darken are being used to change the base color which is blue to either become lighter or become darker. In between the () you see values such as 20% and 10%. These values represented what each of the function will lighten or darken by. In the first code, the fucntion is making the color blue lighter by 20%. In the second code, the fucntion is making the color pink darker by 10%. These properties could be used for any colors that are being used in the code so that the colors are able to change accordingly.</p>
 
-<p> FADEIN AND FADEOUT </p>
+<p> FADEIN AND FADEOUT: </p>
 
 ```css
 @base-color: pink;
@@ -40,7 +40,7 @@
 @fadeout-color: fadeout(@base-color, 20%);
 ```
 
-<p>fadein and fadeout work to manipluate a oolor based on its transparency. Spefically, fadein makes a color less transparent while fadeout makes a color more trasnparent. In the first code, the color pink is being manipulated to being less transparent and the second one is being manipluated to becoming more transparent. Each line of code also have a number value which indicates how transparent they are becoming. Pink is lessening in transparency by 30% and Blue is darkening in transparency by 20%. </p>
+<p>fadein and fadeout work to manipluate a oolor based on its transparency. Specifically, fadein makes a color less transparent while fadeout makes a color more trasnparent. In the first code, the color pink is being manipulated to being less transparent and the second one is being manipluated to becoming more transparent. Each line of code also have a number value which indicates how transparent they are becoming. Pink is lessening in transparency by 30% and Blue is darkening in transparency by 20%. </p>
 
 
 <p> MATH FUNCTIONS: </p>
