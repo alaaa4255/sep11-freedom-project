@@ -90,7 +90,7 @@ height: @base-size * @button-multiplier * 2;
 <p>The base size is being multiplied by the button multipler and 2. So, the number/equtation is (16)(1.5)(2) which is 48. This is calculating the height of the button.</p>
 
 ```css
-border-radius: unit(sqrt(@base-size), px);  // sqrt(16) = 4px. unit() ensures the value has px units → smooth rounded corners.
+border-radius: unit(sqrt(@base-size), px);
   font-size: @base-size * 1.1;
   ```
 
