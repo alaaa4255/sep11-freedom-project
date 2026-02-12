@@ -301,6 +301,4 @@ Retrieved 2026-02-08, License - CC BY-SA 3.0
 
 
 
-[Previous](entry02.md) | [Next](entry04.md)
 
-[Home](../README.md)
