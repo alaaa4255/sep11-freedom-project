@@ -614,3 +614,68 @@ fs.readFile('styles.less', 'utf8', (err, lessCode) => {
 <a href = "https://www.youtube.com/watch?v=YD91G8DdUsw"> youtube viedeo </a>
 
 * This youtube video taught me how I could use functions in less <a href = "https://www.youtube.com/watch?v=U9mJmy0YhmQ> youtube
+
+### 2/22/26
+@primary:  green;
+@secondary: blue;
+.section {
+  @color: primary;
+
+  .element {
+    color: @@color;
+  }
+}
+```
+
+So, after going over some of the commonly used codes in less;css I tinkered with it by picking out potential headings and background colors for the project I am trying to create.
+
+``` css
+  // Base colors
+@primary-color: #ff6f61;    // coral, for main buttons/links
+@secondary-color: #b19cd9;  // light purple, for secondary elements
+@bg-color: #ffc0cb;          // light pink
+@text-color: #ffffff;        // white
+
+// Body styling
+body {
+  background-color: @bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+// Main message
+.main-message {
+  color: @text-color;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// Example buttons using primary/secondary
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: @text-color;
+  transition: all 0.3s ease;
+}
+
+.button-primary {
+  background-color: @primary-color;
+  &:hover { background-color: lighten(@primary-color, 10%); }
+}
+
+.button-secondary {
+  background-color: @secondary-color;
+  &:hover { background-color: lighten(@secondary-color, 10%); }
+}
+```
+
