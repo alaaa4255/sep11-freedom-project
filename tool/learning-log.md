@@ -678,4 +678,86 @@ body {
   &:hover { background-color: lighten(@secondary-color, 10%); }
 }
 ```
+### 3/8/2026
+- since we started to code our freedom project I started to watch videos that show how I could create a site using less;css. I applied what I learned to what I have practiced so far and what I had already planned to make
+- the youtube video was <a href= ¨https://www.youtube.com/watch?v=RctP49SwyT0¨ </a>
 
+- Things that I found helipful in the video.
+
+- Use Semantic HTML
+
+Structure site with semantic tags (e.g., <header>, <nav>, <main>, <footer>)
+
+Proper heading hierarchy (e.g., <h1>, <h2>, <h3>)
+
+Use <ul>, <ol>, <li> for lists properly
+
+Layout with Flexbox or Grid
+
+Flexbox: Simple, flexible layouts
+
+.container { display: flex; justify-content: space-between; align-items: center; }
+
+Grid: Two-dimensional layouts
+
+.grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+Use System Fonts
+
+Stick to web-safe fonts (e.g., Arial, Helvetica, Verdana)
+
+Use rem units for font sizes for scalability
+
+body { font-size: 16px; line-height: 1.5; }
+
+CSS Variables
+
+Define reusable values (e.g., colors, font sizes)
+
+:root { --primary-color: #3498db; --secondary-color: #2ecc71; }
+
+Essential Styling
+
+Avoid over-styling; focus on readability and structure
+
+Minimal use of borders, shadows, and animations
+
+Reset CSS
+
+Use a basic reset for consistency across browsers
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+Responsive Design with Media Queries
+
+Use breakpoints to adjust layout
+
+@media (max-width: 768px) { .container { flex-direction: column; } }
+
+Smooth Transitions
+
+Add transitions for interactive states (e.g., hover)
+
+a { color: #3498db; transition: color 0.3s ease; }
+a:hover { color: #2ecc71; }
+
+Minimize Framework Use
+
+Avoid heavy frameworks like Bootstrap if possible
+
+Only add external libraries when absolutely necessary
+
+Use rem and em for Flexibility
+
+Use relative units for scalability and flexibility
+
+h1 { font-size: 2rem; }
+
+Utility Classes
+
+Consider writing custom utility classes for common properties
+
+.mt-4 { margin-top: 1rem; }
+.text-center { text-align: center; }
+
+These are things google and the video helped me pick up. 
