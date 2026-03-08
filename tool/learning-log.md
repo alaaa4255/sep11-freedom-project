@@ -686,78 +686,68 @@ body {
 
 - Use Semantic HTML
 
-Structure site with semantic tags (e.g., <header>, <nav>, <main>, <footer>)
+- Structure site with meaningful tags (e.g., <header>, <nav>, <main>, <footer>)
 
-Proper heading hierarchy (e.g., <h1>, <h2>, <h3>)
+- Maintain proper heading hierarchy for accessibility and SEO
 
-Use <ul>, <ol>, <li> for lists properly
+- use lists (<ul>, <ol>, <li>) appropriately
 
-Layout with Flexbox or Grid
+- Layout with Flexbox or Grid
 
-Flexbox: Simple, flexible layouts
+- Flexbox: Simple, flexible layout system for one-dimensional designs
 
-.container { display: flex; justify-content: space-between; align-items: center; }
+- CSS Grid: Powerful for two-dimensional layouts, offering precise control over placement
 
-Grid: Two-dimensional layouts
+- Use System Fonts
 
-.grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+- Stick to default system fonts for faster load times and consistency
 
-Use System Fonts
+- Use relative font sizes (rem or em) for scalability across different screen sizes
 
-Stick to web-safe fonts (e.g., Arial, Helvetica, Verdana)
+- CSS Variables
 
-Use rem units for font sizes for scalability
+- Use variables for reusable values like colors, font sizes, etc.
 
-body { font-size: 16px; line-height: 1.5; }
+- Makes future design updates easier and more efficient
 
-CSS Variables
+- Essential Styling
 
-Define reusable values (e.g., colors, font sizes)
+- Focus on the core design elements (e.g., spacing, alignment, and readability)
 
-:root { --primary-color: #3498db; --secondary-color: #2ecc71; }
+- Avoid excessive decorations or unnecessary complexity
 
-Essential Styling
+- Reset CSS
 
-Avoid over-styling; focus on readability and structure
+- Normalize styles across different browsers to ensure consistency
 
-Minimal use of borders, shadows, and animations
+- Use a basic reset to avoid default browser styles interfering with the layout
 
-Reset CSS
+- Responsive Design with Media Queries
 
-Use a basic reset for consistency across browsers
+- Make the site adjust to various screen sizes using breakpoints
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+- Create flexible layouts that look good on desktops, tablets, and phones
 
-Responsive Design with Media Queries
+- Smooth Transitions
 
-Use breakpoints to adjust layout
+- Add subtle hover or focus transitions for interactivity without complexity
 
-@media (max-width: 768px) { .container { flex-direction: column; } }
+- Improve user experience with simple animations and effects
 
-Smooth Transitions
+- Minimize Framework Use
 
-Add transitions for interactive states (e.g., hover)
+- Avoid over-reliance on heavy CSS frameworks like Bootstrap
 
-a { color: #3498db; transition: color 0.3s ease; }
-a:hover { color: #2ecc71; }
+- Use plain CSS or lightweight libraries to keep the site fast and clean
 
-Minimize Framework Use
+- Use rem and em for Flexibility
 
-Avoid heavy frameworks like Bootstrap if possible
+- Use relative units for better scalability and control over layout
 
-Only add external libraries when absolutely necessary
+- Helps maintain a consistent design across different screen sizes and user settings
 
-Use rem and em for Flexibility
+- utility Classes
 
-Use relative units for scalability and flexibility
+- Create utility classes for common styles (e.g., spacing, alignment)
 
-h1 { font-size: 2rem; }
-
-Utility Classes
-
-Consider writing custom utility classes for common properties
-
-.mt-4 { margin-top: 1rem; }
-.text-center { text-align: center; }
-
-These are things google and the video helped me pick up. 
+- Reduces redundancy and keeps the stylesheet concise
