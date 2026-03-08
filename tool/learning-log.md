@@ -690,7 +690,7 @@ body {
 
 - Maintain proper heading hierarchy for accessibility and SEO
 
-- use lists (<ul>, <ol>, <li>) appropriately
+- use lists 
 
 - Layout with Flexbox or Grid
 
