@@ -753,8 +753,6 @@ body {
 - Reduces redundancy and keeps the stylesheet concise
 
 ### 03/22/2026
-
-
 ```css
 /* Variables for color */
 @primary-color: #4CAF50; /* Green */
