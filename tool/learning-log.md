@@ -875,3 +875,22 @@ form {
     }
 }
 ```
+
+### 03/23/2026
+
+
+* As of right now, I updated and changed the html part of my project because I wanted it to be more descriptive for the home page of what I am creating 
+
+
+```html 
+ <h1>WELCOME TO THE BEST PLANNING EVENT CENTER !</h1>
+        <h2>YOU CAN PLAN ANY TYPE OF EVENT, FOR ANY TYPE OF AGE, FOR ANY TYPE OF GENDER, FOR ANY TYPE OF SEASON</h2>
+
+        <p>The app is designed to help you plan any event you desire. You will be walked through multiple steps in which you will be asked; what event are you trying to plan ? (Ex; Birthday party) How old is the person you are planning for ? (Ex; 16 years old) What color scheme will the party be ? (Ex; blue and gold), what type of season is the party going to be in ? (Ex; summer) At the end, not only will we help you figure out how to plan the event but we will also provide you with online shopping websites that you could purchase materials for your event within the price range you choose.  </p>
+
+        <p>When you are ready, Click the button ¨PLAN¨ !</p>
+
+        <p>Happy event planning !</p>
+
+        <button> PLAN </button>
+      ```
