@@ -5,33 +5,542 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet/less" type="text/css" href="styles.less" />
+      <style>
             /* CSS */
-            
+
+                 @primary-color: #9b4f80;
+
+                body {
+                    background-color: @primary-color;
+                    font-family: Arial, sans-serif;
+                }
+
+                @color: #ff4fd8;
+
+                h1 {
+                    text-align: center; 
+                    font-size: 70px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: @color;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+                }
+
+                
+
+
+                .my-container1 {
+                    width: 800px;
+                    padding: 30px;
+                    background: #939393;
+                    border-radius: 20px;
+                    font-size: 18px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #ffffff;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                    line-height: 2.5;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+                    position: absolute;  
+                    top: 50%;            
+                    left: 50%;           
+                    transform: translate(-50%, -50%);  
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #ffffff;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                        position: absolute;  
+                        left: 2%;
+                        
+                }
+
+                .checklist-btn {
+                    width: 200px;
+                    padding: 30px;
+                    background: #939393;
+                    border-radius: 20px;
+                    font-size: 25px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #ffffff;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                    line-height: .5;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+                    position: absolute;  
+                    top: 95%;            
+                    left: 40%;           
+                    transform: translate(-50%, -50%);  
+                }
+
+                h2 {
+                    font-size: 15px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #ffffff;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                    position: absolute;  
+                    top: 70%;            
+                    left: 50%;           
+                    transform: translate(-50%, -50%);  
+                }
+
+               
+
+               
+
+                
+
+                h3 {
+                font-size: 20px;
+                font-weight: 900;
+                font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                color: #ffffff;
+
+                text-shadow:
+                    2px 2px 0 darken(@color, 25%),
+                    5px 5px 0 rgba(0, 0, 0, 0.2),
+                    8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                    position: absolute;  
+                    left: 2%;
+                    
+                }
+
+
+                h2 {
+                    font-size: 15px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #ffffff;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                        position: absolute;  
+                    top: 80%;            
+                    left: 50%;           
+                t   ransform: translate(-50%, -50%);  
+                }
+
+
+                #checklistInput {
+                    width: 600px;
+                    padding: 30px;
+                    background: #ffffff;
+                    border-radius: 20px;
+                    font-size: 25px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #000000;
+
+                    text-shadow:
+                    
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+
+                    margin-bottom: 10px;
+                    position: absolute;  
+                    top: 115%;            
+                    left: 50%;           
+                    transform: translate(-50%, -50%);  
+                }
+
+
+
+
+                #addItemBtn {
+
+                    width: 100px;
+                    padding: 30px;
+                    background: #ffffff;
+                    border-radius: 20px;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #000000;
+
+                    line-height: .5;
+                    text-shadow:
+                        
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+
+
+
+                    position: absolute;  
+                    top: 115%;            
+                    left: 80%;           
+                    transform: translate(-50%, -50%);  
+                }
+
+
+                #checklistPlan {
+                    position: absolute;
+                    top: 130%;  /* This positions the list right after the text input (which is at 115%) */
+                    left: 50%;
+                    transform: translateX(-50%); /* Centers the list container horizontally */
+                    padding: 0;
+                    margin-top: 5px;  /* Add space between the input and the checklist */
+                }
+
+
+
+                #checklistPlan li {
+                        padding: 20px;
+                        border-bottom: 1px solid #ccc;
+                    
+                        font-size: 40px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #000000;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+
+                }
+
+                .delete-btn {
+                    background-color: #000000;  /* Red color for delete button */
+                    color: @color;
+                    border: none;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    margin-left: 20px;
+                    width: 50;
+                    line-height:  1.5
+                }
+
+                .delete-btn:hover {
+                    background-color: #939393;  
+                }
+
+                #shopPlanBtn {
+                    width: 200px;
+                    padding: 30px;
+                    background: #939393;
+                    border-radius: 20px;
+                    font-size: 25px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #ffffff;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                    line-height: .5;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+                    position: absolute;  
+                    top: 95%;            
+                    left: 60%;           
+                    transform: translate(-50%, -50%);  
+                }
+
+                #events {
+                    width: 300px;
+                    height: 2.5;
+
+                    font-size: 25px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #000000;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+
+                    position: absolute;  
+                    top: 115%;            
+                    left: 50%;           
+                    transform: translate(-50%, -50%);  
+                }
+
+                p {
+                    font-size: 25px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #ffffff;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+
+                    position: absolute;  
+                    top: 105%;            
+                    left: 50%;           
+                    transform: translate(-50%, -50%);  
+                }
+
+                #decorLinks h3 {
+                    margin-top: 5px;
+                    font-size: 25px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #000000;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+
+                    position: absolute;  
+                    top: 125%;            
+                    left: 50%;           
+                    transform: translate(-50%, -50%);  
+              }
+
+                #decorList {
+                    margin-top: 5px;
+                    font-size: 25px;
+                    font-weight: 900;
+                    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+                    color: #000000;
+
+                    text-shadow:
+                        2px 2px 0 darken(@color, 25%),
+                        5px 5px 0 rgba(0, 0, 0, 0.2),
+                        8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                    position: absolute;  
+                    top: 140%;            
+                    left: 50%;           
+                    transform: translate(-50%, -50%);  
+
+                }
+
+
+
+
+
+
+                        
+                                    
         </style>
-        
+       
         <title>Title</title>
     </head>
     <body>
         <!-- HTML -->
-        
-        <h1>WELCOME TO THE BEST PLANNING EVENT CENTER !</h1>
-        <h2>YOU CAN PLAN ANY TYPE OF EVENT, FOR ANY TYPE OF AGE, FOR ANY TYPE OF GENDER, FOR ANY TYPE OF SEASON</h2>
+       <h3>EVENT PLANNING SOCIETY</h3>
+        <h1>WELCOME!</h1>
+        <div class="my-container1"> 
+            EVENT PLANNING SOCIETY provides with the ability to not only make a checklist that you could use to track what you need to do and get done in which you could add and delete off the checklist but it also provides you with the ability to be provided with online shopping centers that fits within the event you are planning.
 
-        <p>The app is designed to help you plan any event you desire. You will be walked through multiple steps in which you will be asked; what event are you trying to plan ? (Ex; Birthday party) How old is the person you are planning for ? (Ex; 16 years old) What color scheme will the party be ? (Ex; blue and gold), what type of season is the party going to be in ? (Ex; summer) At the end, not only will we help you figure out how to plan the event but we will also provide you with online shopping websites that you could purchase materials for your event within the price range you choose.  </p>
+        </div>
 
-        <p>When you are ready, Click the button ¨PLAN¨ !</p>
+        <div>
+                <h2>Click ¨checklist¨ in order to start your own event planning checklist OR click ¨shop¨ to shop for the event you are planning!</h2>
+            <button class="checklist-btn">Checklist</button>
+        </div>
 
-        <p>Happy event planning !</p>
+            <div id="checklist" style="display: none; margin-top: 20px;">
+            <input type="text" id="checklistInput" placeholder="checklist your plan..." />
+            <button id="addItemBtn">ADD</button>
+        </div>
 
-        <button> PLAN </button>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
+        <!-- This is where the checklist items will be displayed -->
+        <ul id="checklistPlan"></ul>
+
+       <div>
+        <button id="shopPlanBtn">shop</button>
+       </div>
+
+       <div id="shopSection" style="display: none; margin-top: 20px;">
+            <p>Select The Event You Are Planning:</p>
+            <select id="events">
+                <option value="event1">Birthday</option>
+                <option value="event2">Wedding</option>
+                <option value="event3">Halloween Party</option>
+                <option value="event4">Christmas Party</option>
+                <option value="event5">Cultural Party</option>
+            </select>
+        </div>
+
+        <div id="decorLinks" style="display: none; margin-top: 20px;">
+                <h3>Visit these shopping websites to help you organize what you need for your event:</h3>
+                <ul id="decorList"></ul>
+            </div>
+        </div>
+
+       
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="script.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+      <script>
             // JS
-            
-            
+                document.addEventListener('DOMContentLoaded', function() {
+                    //select all the elements for the checklist section content
+                var checklistBtn = document.querySelector(".checklist-btn");  
+                var checklist = document.getElementById('checklist');  
+                var checklistInput = document.getElementById('checklistInput');   
+                var addItemBtn = document.getElementById('addItemBtn');  
+                var checklistPlan = document.getElementById('checklistPlan');  
+
+                // Select all of the elements for the shop ssection content 
+                var shopBtn = document.getElementById("shopPlanBtn");
+                var shopSection = document.getElementById("shopSection");
+                var eventSelect = document.getElementById("events");
+                var decorLinks = document.getElementById("decorLinks");
+                var decorList = document.getElementById("decorList");
+
+                // Hide both checklist and shop sections at first
+                checklist.style.display = 'none'; // no checklist showing
+                shopSection.style.display = 'none';  // no shop content showing
+                decorLinks.style.display = 'none'; // no decor links showing
+
+                // Show checklist input when "Checklist" button is clicked
+                checklistBtn.addEventListener('click', function() {
+                    checklist.style.display = 'block';  // Show checklist
+                    shopSection.style.display = 'none'; // Hide shop
+                    decorLinks.style.display = 'none'; // Hide decor links
+                });
+
+                // Show shop section when "Shop" button is clicked
+                shopBtn.addEventListener('click', function() {
+                    shopSection.style.display = 'block';  // Show shop section
+                    checklist.style.display = 'none';    // Hide checklist
+                    decorLinks.style.display = 'none'; // Hide decor links 
+                });
+
+                // Function to add a checklist item
+                var addChecklistItem = (itemText) => {
+                    if (!itemText.trim()) return;  // Don't allow users to add empty items
+
+
+                    // Create the list 
+                    var listItem = document.createElement('li'); 
+                    listItem.classList.add('checklist-item'); // adding a class
+
+                    // Create the label for the checklist text
+                    var label = document.createElement('span');
+                    label.textContent = itemText; // setting the text of the label
+
+                    // Create the delete button
+                    var deleteBtn = document.createElement('button');
+                    deleteBtn.textContent = 'Delete'; // the text on the button
+                    deleteBtn.classList.add('delete-btn'); // adding a class
+
+                    // Append the label and delete button to the list 
+                    listItem.appendChild(label);
+                    listItem.appendChild(deleteBtn);
+
+                    // Append the list item to the checklist plan (UL)
+                    checklistPlan.appendChild(listItem);
+
+                    // Clear the input area after an ¨item¨ list was added
+                    checklistInput.value = '';
+
+                    // Add event listener to the delete button
+                    deleteBtn.addEventListener('click', function() {
+                        checklistPlan.removeChild(listItem);  // Remove the item from the list when delete button is clicked
+                    });
+                };
+
+                // Add item when the "Add" button is clicked
+                addItemBtn.addEventListener('click', function() {
+                    var itemText = checklistInput.value;
+                    addChecklistItem(itemText);  
+                });
+
+                // Handle the event type selection
+                eventSelect.addEventListener('change', function() {
+                    var selectedEvent = eventSelect.value; // get the value being chosen
+
+                    // Clear existing links
+                    decorList.innerHTML = '';
+
+                    // Show the decor links depending on the event selected
+                    if (selectedEvent === 'event3') {  // Halloween Party
+                        decorLinks.style.display = 'block';
+                        decorList.innerHTML = `
+                            <li><a href="https://www.halloween-decor.com" target="_blank">Halloween Decorations</a></li>
+                            <li><a href="https://www.partycity.com/halloween-decorations" target="_blank">Party City Halloween Decorations</a></li>
+                        `;
+                    } else if (selectedEvent === 'event1') {  // Birthday
+                        decorLinks.style.display = 'block';
+                        decorList.innerHTML = `
+                            <li><a href="https://www.birthdayexpress.com" target="_blank">Birthday Decorations</a></li>
+                            <li><a href="https://www.partycity.com/birthday-decorations" target="_blank">Party City Birthday Decorations</a></li>
+                        `;
+                    } else if (selectedEvent === 'event2') {  // Wedding
+                        decorLinks.style.display = 'block';
+                        decorList.innerHTML = `
+                            <li><a href="https://www.weddingstar.com" target="_blank">Wedding Decorations</a></li>
+                            <li><a href="https://www.theknot.com/wedding-decor" target="_blank">The Knot Wedding Decorations</a></li>
+                        `;
+                    } else if (selectedEvent === 'event4') {  // Christmas Party
+                        decorLinks.style.display = 'block';
+                        decorList.innerHTML = `
+                            <li><a href="https://www.christmascentral.com" target="_blank">Christmas Decorations</a></li>
+                            <li><a href="https://www.holidaywarehouse.com" target="_blank">Holiday Warehouse Christmas Decorations</a></li>
+                        `;
+                    } else if (selectedEvent === 'event5') {  // Cultural Party
+                        decorLinks.style.display = 'block';
+                        decorList.innerHTML = `
+                            <li><a href="https://www.southasianpartyshop.com" target="_blank">Cultural Party Decorations</a></li>
+                            <li><a href="https://www.partycity.com/cultural-decorations" target="_blank">Party City Cultural Decorations</a></li>
+                        `;
+                    } else {
+                        decorLinks.style.display = 'none';  // Hide the decor links if no event selected
+                    }
+                });
+            });
+           
         </script>
     </body>
 </html>
