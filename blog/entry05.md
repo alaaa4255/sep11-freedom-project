@@ -262,7 +262,13 @@ position: absolute;
                         2px 2px 0 darken(@color, 25%),
                         5px 5px 0 rgba(0, 0, 0, 0.2),
                         8px 8px 15px rgba(0, 0, 0, 0.2);
+
+                
 ```
+
+### SKILLS: 
+
+<p> Throughout the whole process of coding my mvp, I gained the skills of applying my tool to my final project. I also gained the skills of knowing how and where to look if I need to figure out why a certain part of my code isnt working. I was able to understand how to use my tool to build onto my javasxript codes such as the chechlist, the shopping center, the links, the events, etc. I was also able to go on the less website and search about the spacing and positiong of certain content in which helped me figure out that I needed to use border-bottom. So, overall the skills I gained was the ability of being able to figure how what to do and what to look for if I ended up being stuck. </p>
 
 ### SUMMARY
 <p> In summary, for my mvp freedom project I created a event planning checklist and shopping effect. To expand on to that beyond my mvp, I want to create more options on to the page such as a budgeting section and more. I also want to use more concepts and elemenst of my tool instead of just absouloute positioning and buuble letters. </p>
