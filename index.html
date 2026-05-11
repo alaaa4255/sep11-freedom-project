@@ -141,7 +141,7 @@
 
                         text-shadow: @soft-shadow;
 
-                        .center-absolute(115%);
+                        .center-absolute(155%);
                     }
 
                     #addItemBtn {
@@ -158,11 +158,11 @@
 
                         text-shadow: @soft-shadow;
 
-                        .center-absolute(115%, 82%);
+                        .center-absolute(155%, 82%);
                     }
 
                     #checklistPlan {
-                        .center-absolute(135%);
+                        .center-absolute(180%);
                         transform: translateX(-50%);
 
                         width: 90%;
@@ -182,12 +182,11 @@
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            gap: 20px;
+                            gap: 10px;
                             flex-wrap: wrap;
                         }
                     }
 
-                   
 
                     .delete-btn {
                         background-color: @black;
@@ -341,7 +340,43 @@
                         }
                     }
 
-             
+                    #budgetInput {
+                    width: 500px;
+                    padding: 15px;
+                    border-radius: 20px;
+                    border: none;
+                    .text-style(20px, @black);
+                    text-shadow: @soft-shadow;
+                    .center-absolute(125%); /* above checklist input at 155% */
+                }
+
+                #setBudgetBtn {
+                    width: 130px;
+                    padding: 15px;
+                    border-radius: 20px;
+                    border: none;
+                    background: @white;
+                    .text-style(20px, @black);
+                    text-shadow: @soft-shadow;
+                    .center-absolute(120%, 75%); /* horizontally aligned */
+                }
+
+                #budgetDisplay {
+                    .text-style(20px, @white);
+                    .center-absolute(135%); /* slightly below budget input/button */
+                }
+
+                #itemCostInput {
+                    width: 500px;
+                    padding: 15px;
+                    border-radius: 20px;
+                    border: none;
+                    .text-style(20px, @black);
+                    text-shadow: @soft-shadow;
+                    .center-absolute(110%, 50%); /* below checklist input */
+            }
+
+                  
        </style>
 
 
@@ -362,9 +397,14 @@
             <button class="checklist-btn">Checklist</button>
         </div>
 
-            <div id="checklist" style="display: none; margin-top: 20px;">
-            <input type="text" id="checklistInput" placeholder="checklist your plan..." />
+         <div id="checklist" style="display: none;">
+            <input type="text" id="checklistInput" placeholder="Checklist your plan..." />
+            <input type="number" id="itemCostInput" placeholder="Enter cost..." />
             <button id="addItemBtn">ADD</button>
+            <br>
+            <input type="number" id="budgetInput" placeholder="Enter budget..." />
+            <button id="setBudgetBtn">Set Budget</button>
+            <div id="budgetDisplay">Remaining Budget: $0</div>
         </div>
 
        
@@ -399,7 +439,7 @@
         <script src="https://cdn.jsdelivr.net/npm/less" ></script>
       <script>
             // JS
-                document.addEventListener('DOMContentLoaded', function() {
+               document.addEventListener('DOMContentLoaded', function() {
                     //select all the elements for the checklist section content
                 var checklistBtn = document.querySelector(".checklist-btn");  
                 var checklist = document.getElementById('checklist');  
@@ -407,7 +447,15 @@
                 var addItemBtn = document.getElementById('addItemBtn');  
                 var checklistPlan = document.getElementById('checklistPlan');  
 
-                // Select all of the elements for the shop ssection content 
+                var itemCostInput = document.getElementById('itemCostInput');
+                var budgetInput = document.getElementById('budgetInput');
+                var setBudgetBtn = document.getElementById('setBudgetBtn');
+                var budgetDisplay = document.getElementById('budgetDisplay');
+
+                var totalBudget = 0;
+                var remainingBudget = 0;
+
+                // Select all of the elements for the shop section content 
                 var shopBtn = document.getElementById("shopPlanBtn");
                 var shopSection = document.getElementById("shopSection");
                 var eventSelect = document.getElementById("events");
@@ -433,10 +481,23 @@
                     decorLinks.style.display = 'none'; // Hide decor links 
                 });
 
-                // Function to add a checklist item
-                var addChecklistItem = (itemText) => {
-                    if (!itemText.trim()) return;  // Don't allow users to add empty items
+                // Set the total budget
+                setBudgetBtn.addEventListener('click', function() {
+                    totalBudget = parseFloat(budgetInput.value) || 0;
+                    remainingBudget = totalBudget;
+                    budgetDisplay.textContent = `Remaining Budget: $${remainingBudget.toFixed(2)}`;
+                });
 
+                // Function to add a checklist item
+                var addChecklistItem = (itemText, itemCost) => {
+                    if (!itemText.trim()) return;  // Don't allow users to add empty items
+                    itemCost = parseFloat(itemCost) || 0;
+
+                    // Update remaining budget
+                    remainingBudget -= itemCost;
+                    if (remainingBudget < 0) remainingBudget = 0;
+
+                    budgetDisplay.textContent = `Remaining Budget: $${remainingBudget.toFixed(2)}`;
 
                     // Create the list 
                     var listItem = document.createElement('li'); 
@@ -444,7 +505,7 @@
 
                     // Create the label for the checklist text
                     var label = document.createElement('span');
-                    label.textContent = itemText; // setting the text of the label
+                    label.textContent = `${itemText} - $${itemCost.toFixed(2)}`; // setting the text of the label
 
                     // Create the delete button
                     var deleteBtn = document.createElement('button');
@@ -458,19 +519,23 @@
                     // Append the list item to the checklist plan (UL)
                     checklistPlan.appendChild(listItem);
 
-                    // Clear the input area after an ¨item¨ list was added
+                    // Clear the input areas after an item was added
                     checklistInput.value = '';
+                    itemCostInput.value = '';
 
                     // Add event listener to the delete button
                     deleteBtn.addEventListener('click', function() {
                         checklistPlan.removeChild(listItem);  // Remove the item from the list when delete button is clicked
+                        remainingBudget += itemCost; // Add back the deleted item's cost
+                        budgetDisplay.textContent = `Remaining Budget: $${remainingBudget.toFixed(2)}`;
                     });
                 };
 
                 // Add item when the "Add" button is clicked
                 addItemBtn.addEventListener('click', function() {
                     var itemText = checklistInput.value;
-                    addChecklistItem(itemText);  
+                    var itemCost = itemCostInput.value;
+                    addChecklistItem(itemText, itemCost);  
                 });
 
                 // Handle the event type selection
@@ -516,7 +581,6 @@
                     }
                 });
             });
-           
         </script>
     </body>
 </html>
