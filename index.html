@@ -11,7 +11,7 @@
       <style type="text/less">
             /* CSS */
 
-                @primary-color: #9b4f80;
+                        @primary-color: #9b4f80;
                 @accent-color: #ff4fd8;
                 @gray-bg: #939393;
                 @white: #ffffff;
@@ -114,20 +114,17 @@
              }
 
 
-                    .checklist-btn,
-                        #shopPlanBtn {
-                            .button-style();
-
-                            width: 200px;
-                      }
-
+                    @media (max-width: 768px) {
                         .checklist-btn {
-                            .center-absolute(95%, 40%);
-                       }
+                            width: 40%;
+                            left: 25%;
+                        }
 
                         #shopPlanBtn {
-                            .center-absolute(95%, 60%);
-                      }
+                            width: 40%;
+                            left: 75%; 
+                        }
+                    }
 
                         #checklistInput {
                         width: min(90%, 600px);
@@ -143,7 +140,18 @@
 
                         .center-absolute(155%);
                     }
+                     
 
+                    @media (max-width: 480px) {
+                        .checklist-btn,
+                        #shopPlanBtn  {
+                            width: 45%;    
+                            left: 50%;     
+                            transform: translate(-50%, -50%);
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+                    }
                     #addItemBtn {
                         width: 120px;
 
@@ -157,7 +165,6 @@
                         .text-style(20px, @black);
 
                         text-shadow: @soft-shadow;
-
                         .center-absolute(155%, 82%);
                     }
 
@@ -340,34 +347,39 @@
                         }
                     }
 
+
                     #budgetInput {
-                    width: 500px;
+                    width: 400px;
                     padding: 15px;
                     border-radius: 20px;
                     border: none;
                     .text-style(20px, @black);
                     text-shadow: @soft-shadow;
-                    .center-absolute(125%); /* above checklist input at 155% */
+                    .center-absolute(125%); 
                 }
 
-                #setBudgetBtn {
-                    width: 130px;
-                    padding: 15px;
+               
+               #setBudgetBtn {
+                    width: 15vw; 
+                    max-width: 130px; 
+                    min-width: 0px; 
+                    padding: 1rem; 
                     border-radius: 20px;
                     border: none;
                     background: @white;
-                    .text-style(20px, @black);
+                    .text-style(1.2rem, @black);
                     text-shadow: @soft-shadow;
-                    .center-absolute(120%, 75%); /* horizontally aligned */
+                    .center-absolute(135%, 63%);
                 }
+         
 
                 #budgetDisplay {
                     .text-style(20px, @white);
-                    .center-absolute(135%); /* slightly below budget input/button */
+                    .center-absolute(135%, 40%); /* slightly below budget input/button */
                 }
 
                 #itemCostInput {
-                    width: 500px;
+                    width: 400px;
                     padding: 15px;
                     border-radius: 20px;
                     border: none;
@@ -376,7 +388,7 @@
                     .center-absolute(110%, 50%); /* below checklist input */
             }
 
-                  
+                            
        </style>
 
 
