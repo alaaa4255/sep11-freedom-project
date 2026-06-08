@@ -1,22 +1,25 @@
 # SEP11 Freedom Project
-by **X**
+by Alaa Halim
 
 ## Context
 I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for SEP11 is a year-long project all about making something using JavaScript along with a third-party JS tool.
 
-For my project, I chose to independently study **X** in order to help me make **X**.
+For my project, I chose to independently study less;css js in order to help me make an event planner.
 
 ## Links
 
-[Product]()
+[Product](https://alaaa4255.github.io/sep11-freedom-project/)
 
-[Presentation]()
+[Presentation](https://docs.google.com/presentation/d/1nU4rynHoJuce6vg7f1_rnKNMukr2hnVkems0K1n1Bd0/edit?slide=id.g3e104cc0e2c_0_19#slide=id.g3e104cc0e2c_0_19)
 
 ## Implications
 ##### PROS
-* 
+*  Learned how to fix coding problems
+*  Learned how to use a tool that is self taught while coding my project
+*  taught me time mangament and patience
 ##### CONS
-* 
+* Took a while to build
+* Had a hard time making the project responsive
 
 
 ## Blog
